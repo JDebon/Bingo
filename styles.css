@@ -1,6 +1,8 @@
 body {
     box-sizing: border-box;
     margin: 0;
+    display: flex;
+    justify-content: center;
 }
 .bingo {
     display: flex;
@@ -8,7 +10,7 @@ body {
     max-width: 500px;
 }
 .cuadro {
-    border: 1px solid black;
+    border: 1px solid rgb(255, 97, 97);
     height: 50px;
     width: 50px;
 }

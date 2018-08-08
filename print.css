@@ -1,8 +1,16 @@
-.bingo {
-    border: 1px solid black;
+body {
+    box-sizing: border-box;
+    margin: 0;
     display: flex;
+    justify-content: center;
 }
-p {
-    font-size: 40px;
-    height: 200px;
+.bingo {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+}
+.cuadro {
+    border: 1px solid rgb(255, 97, 97);
+    height: 50px;
+    width: 50px;
 }
