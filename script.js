@@ -27,3 +27,17 @@ var bingo = [
     26,
     27
 ];
+function GenerarCarton() {
+    for (var i = 0; i < bingo.length; i++) {
+        var cuadro = document.createElement('div');
+        var carton = document.getElementById('carton');
+        carton.appendChild(cuadro);
+        cuadro.classList.add('cuadro');
+        bingo[i] = cuadro;
+        var num = i + 1;
+        var numeroString = num.toString();
+        var idCuadro = 'cuadro' + numeroString;
+        cuadro.setAttribute('id', idCuadro);
+    }
+}
+GenerarCarton();

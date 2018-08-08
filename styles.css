@@ -1,0 +1,14 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+.bingo {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+}
+.cuadro {
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+}
