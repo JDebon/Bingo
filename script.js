@@ -30,16 +30,24 @@ var bingo = [
 function GenerarCarton() {
     for (var i = 0; i < bingo.length; i++) {
         var cuadro = document.createElement('div');
-        var num = i + 1;
-        var texto = document.createTextNode(num);
-        cuadro.appendChild(texto);
         var carton = document.getElementById('carton');
         carton.appendChild(cuadro);
-        cuadro.classList.add('cuadro');
-        bingo[i] = cuadro;
-        var numeroString = num.toString();
-        var idCuadro = 'cuadro' + numeroString;
-        cuadro.setAttribute('id', idCuadro);
+        aplicarTexto(cuadro, i);
     }
+}
+function aplicarTexto(cuadro, i) {
+    var texto = document.createElement('p');
+    cuadro.appendChild(texto);
+    var num = i + 1;
+    var numString = document.createTextNode(num);
+    texto.appendChild(numString);
+    aplicarEstilo(cuadro, i, num);
+}
+function aplicarEstilo(cuadro, i, num) {
+    cuadro.classList.add('cuadro');
+    bingo[i] = cuadro;
+    var numeroString = num.toString();
+    var idCuadro = 'cuadro' + numeroString;
+    cuadro.setAttribute('id', idCuadro);
 }
 GenerarCarton();
